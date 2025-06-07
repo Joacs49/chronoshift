@@ -28,10 +28,6 @@ size = Vector2(1152, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(50, 648)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lhbbi"]
-radius = 24.0
-height = 58.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_hn12h"]
 animations = [{
 "frames": [{
@@ -103,6 +99,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lhbbi"]
+radius = 24.0
+height = 58.0
+
 [node name="Level-1" type="Node2D"]
 script = SubResource("GDScript_gjkv5")
 
@@ -133,14 +133,14 @@ shape = SubResource("RectangleShape2D_3hls8")
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_lhbbi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(121, 591)
-shape = SubResource("CapsuleShape2D_lhbbi")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(122, 590)
+position = Vector2(32, 618.928)
 scale = Vector2(4, 3.616)
 sprite_frames = SubResource("SpriteFrames_hn12h")
 animation = &"Vox-down"
 frame = 2
 frame_progress = 0.798405
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(31, 619.928)
+shape = SubResource("CapsuleShape2D_lhbbi")
