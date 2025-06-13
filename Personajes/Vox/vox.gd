@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 
 	# Movimiento en ambas direcciones
 	if Input.is_action_pressed("mover_derecha"):
-		direccion_x += 1
+		direccion.x += 1
 	if Input.is_action_pressed("mover_izquierda"):
 		direccion.x -= 1
 	if Input.is_action_pressed("mover_abajo"):
@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite2D.stop()
 
-	# Aplicar movimiento con física
 	move_and_slide()
 
 func _play_animacion(direccion: Vector2) -> void:
