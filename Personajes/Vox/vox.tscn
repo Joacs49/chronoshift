@@ -1,0 +1,107 @@
+[gd_scene load_steps=20 format=3 uid="uid://bp8fdi445fr3"]
+
+[ext_resource type="Texture2D" uid="uid://dd0iuykianckw" path="res://Personajes/Vox/dow/down-1.png" id="1_7fdcr"]
+[ext_resource type="Script" uid="uid://b6778i18evoiy" path="res://Personajes/Vox/vox.gd" id="1_voobg"]
+[ext_resource type="Texture2D" uid="uid://d3apdkcreqw4c" path="res://Personajes/Vox/dow/down-2.png" id="2_voobg"]
+[ext_resource type="Texture2D" uid="uid://dc54psx3cbvor" path="res://Personajes/Vox/dow/down-3.png" id="3_2knrw"]
+[ext_resource type="Texture2D" uid="uid://bn3ix7nmmykv8" path="res://Personajes/Vox/dow/down-4.png" id="4_r5g2e"]
+[ext_resource type="Texture2D" uid="uid://dfcdlsxmmmicg" path="res://Personajes/Vox/left/left-1.png" id="5_okxj2"]
+[ext_resource type="Texture2D" uid="uid://byl3kdb1sms3o" path="res://Personajes/Vox/left/left-2.png" id="6_jjvni"]
+[ext_resource type="Texture2D" uid="uid://dccfra6imbdax" path="res://Personajes/Vox/left/left-3.png" id="7_rqv1t"]
+[ext_resource type="Texture2D" uid="uid://cnqbxcu7xb1v1" path="res://Personajes/Vox/left/left-4.png" id="8_e5hdc"]
+[ext_resource type="Texture2D" uid="uid://cwqktivm3ixx" path="res://Personajes/Vox/right/right-1.png" id="9_rx60k"]
+[ext_resource type="Texture2D" uid="uid://dg0s3ksnnv561" path="res://Personajes/Vox/right/right-2.png" id="10_us4wj"]
+[ext_resource type="Texture2D" uid="uid://bcq0ev4yh3t3p" path="res://Personajes/Vox/right/right-3.png" id="11_sq3o8"]
+[ext_resource type="Texture2D" uid="uid://cthcy8ov4w1xe" path="res://Personajes/Vox/right/right-4.png" id="12_235aw"]
+[ext_resource type="Texture2D" uid="uid://b83x664sd7c61" path="res://Personajes/Vox/up/up-1.png" id="13_n6mpc"]
+[ext_resource type="Texture2D" uid="uid://d3mnoh1ws3fpt" path="res://Personajes/Vox/up/up-2.png" id="14_ctlca"]
+[ext_resource type="Texture2D" uid="uid://dkqe4gyssa3aj" path="res://Personajes/Vox/up/up-3.png" id="15_twefg"]
+[ext_resource type="Texture2D" uid="uid://drt6lo0qecbmx" path="res://Personajes/Vox/up/up-4.png" id="16_clp51"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3v7dm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7fdcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_voobg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2knrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r5g2e")
+}],
+"loop": true,
+"name": &"Vox-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_okxj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jjvni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rqv1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e5hdc")
+}],
+"loop": true,
+"name": &"Vox-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rx60k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_us4wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sq3o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_235aw")
+}],
+"loop": true,
+"name": &"Vox-right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_n6mpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ctlca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_twefg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_clp51")
+}],
+"loop": true,
+"name": &"Vox-up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7fdcr"]
+radius = 19.0
+height = 52.0
+
+[node name="Vox" type="CharacterBody2D" groups=["Vox"]]
+script = ExtResource("1_voobg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 618.928)
+scale = Vector2(4, 3.616)
+sprite_frames = SubResource("SpriteFrames_3v7dm")
+animation = &"Vox-down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31, 621)
+shape = SubResource("CapsuleShape2D_7fdcr")

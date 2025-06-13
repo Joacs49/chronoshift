@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq7ntvw2u27ga"]
+
+[ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="2_hbghi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilcil"]
+size = Vector2(1152, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
+size = Vector2(50, 648)
+
+[sub_resource type="GDScript" id="GDScript_3hls8"]
+script/source = "extends Node
+"
+
+[node name="Level-1" type="Node2D"]
+
+[node name="Superior" type="StaticBody2D" parent="."]
+
+[node name="Arriba" type="CollisionShape2D" parent="Superior"]
+position = Vector2(576, -25)
+shape = SubResource("RectangleShape2D_ilcil")
+
+[node name="Inferior" type="StaticBody2D" parent="."]
+
+[node name="Abajo" type="CollisionShape2D" parent="Inferior"]
+position = Vector2(576, 673)
+shape = SubResource("RectangleShape2D_ilcil")
+
+[node name="LateralIzquierdo" type="StaticBody2D" parent="."]
+
+[node name="Izquierda" type="CollisionShape2D" parent="LateralIzquierdo"]
+position = Vector2(-25, 324)
+shape = SubResource("RectangleShape2D_3hls8")
+
+[node name="LateralDerecho" type="StaticBody2D" parent="."]
+
+[node name="Derecho" type="CollisionShape2D" parent="LateralDerecho"]
+position = Vector2(1177, 324)
+shape = SubResource("RectangleShape2D_3hls8")
+
+[node name="Node" type="Node" parent="."]
+script = SubResource("GDScript_3hls8")
+
+[node name="Vox" parent="." instance=ExtResource("2_hbghi")]
+
+[node name="Camera2D" type="Camera2D" parent="Vox"]
