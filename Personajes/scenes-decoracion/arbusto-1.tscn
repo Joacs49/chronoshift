@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnbtwxkaqnqo0"]
+
+[ext_resource type="Texture2D" uid="uid://b1uwkqx76pwdw" path="res://Tiles/decoracion/arbusto-1.png" id="1_mh52l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mh52l"]
+radius = 15.1327
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(19.5, 16.5)
+scale = Vector2(1.07617, 1.06445)
+texture = ExtResource("1_mh52l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19, 17)
+shape = SubResource("CircleShape2D_mh52l")

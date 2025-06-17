@@ -8,7 +8,7 @@ func _ready() -> void:
 	show()
 	#Global.jugador = self
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direccion = Vector2.ZERO
 
 	# Movimiento en ambas direcciones
