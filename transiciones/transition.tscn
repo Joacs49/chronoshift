@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq4lhwnrkb26j"]
+
+[ext_resource type="Script" uid="uid://cw5m7obtlkdw7" path="res://transiciones/transition.gd" id="1_hw2lm"]
+
+[sub_resource type="Animation" id="Animation_2gi1b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1yi3g"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pj2mc"]
+_data = {
+&"RESET": SubResource("Animation_2gi1b"),
+&"fade": SubResource("Animation_1yi3g")
+}
+
+[node name="Transition" type="CanvasLayer"]
+script = ExtResource("1_hw2lm")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+offset_right = 1264.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pj2mc")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

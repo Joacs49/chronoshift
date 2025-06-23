@@ -1,17 +1,17 @@
-[gd_scene load_steps=18 format=4 uid="uid://dq7ntvw2u27ga"]
+[gd_scene load_steps=25 format=4 uid="uid://dq7ntvw2u27ga"]
 
-[ext_resource type="Script" uid="uid://dh7n3doukanah" path="res://Levels/game-level-1/game.gd" id="1_7xxsr"]
-[ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="2_hdjpo"]
-[ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_hdjpo"]
-[ext_resource type="Texture2D" uid="uid://5xjruir6a0ps" path="res://Tiles/decoracion/plants.png" id="4_wgfeb"]
-[ext_resource type="PackedScene" uid="uid://lygruasddqpp" path="res://Personajes/scenes-decoracion/arbusto-2.tscn" id="5_wgfeb"]
-[ext_resource type="Texture2D" uid="uid://cj42rhkwc5wlu" path="res://Tiles/estructuras/TX Struct.png" id="5_x5uo0"]
-[ext_resource type="PackedScene" uid="uid://bnbtwxkaqnqo0" path="res://Personajes/scenes-decoracion/arbusto-1.tscn" id="5_x40xc"]
-[ext_resource type="Texture2D" uid="uid://b3pcj2ibesuvc" path="res://Tiles/estructuras/TX Tileset Wall.png" id="6_s0eo2"]
-[ext_resource type="Texture2D" uid="uid://csvxaym2pikwn" path="res://Tiles/estructuras/TX Tileset Stone Ground.png" id="7_xm6df"]
+[ext_resource type="Script" uid="uid://dh7n3doukanah" path="res://Levels/intro/game.gd" id="1_qgsrd"]
+[ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="2_hvy3t"]
+[ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_rno4i"]
+[ext_resource type="Texture2D" uid="uid://5xjruir6a0ps" path="res://Tiles/decoracion/plants.png" id="4_idnwr"]
+[ext_resource type="Texture2D" uid="uid://cj42rhkwc5wlu" path="res://Tiles/estructuras/TX Struct.png" id="5_dok86"]
+[ext_resource type="Texture2D" uid="uid://b3pcj2ibesuvc" path="res://Tiles/estructuras/TX Tileset Wall.png" id="6_1i0im"]
+[ext_resource type="Texture2D" uid="uid://csvxaym2pikwn" path="res://Tiles/estructuras/TX Tileset Stone Ground.png" id="7_8xeo5"]
+[ext_resource type="PackedScene" uid="uid://bnbtwxkaqnqo0" path="res://Personajes/scenes-decoracion/arbusto-1.tscn" id="8_08sp2"]
+[ext_resource type="PackedScene" uid="uid://lygruasddqpp" path="res://Personajes/scenes-decoracion/arbusto-2.tscn" id="9_es25k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0o8n"]
-texture = ExtResource("3_hdjpo")
+texture = ExtResource("3_rno4i")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -83,7 +83,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_s0o8n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5uo0"]
-texture = ExtResource("4_wgfeb")
+texture = ExtResource("4_idnwr")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -110,7 +110,7 @@ texture_region_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_x5uo0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jlm2"]
-texture = ExtResource("5_x5uo0")
+texture = ExtResource("5_dok86")
 25:1/0 = 0
 26:1/0 = 0
 27:1/0 = 0
@@ -449,7 +449,7 @@ texture = ExtResource("5_x5uo0")
 31:23/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwibj"]
-texture = ExtResource("6_s0eo2")
+texture = ExtResource("6_1i0im")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -644,7 +644,7 @@ texture = ExtResource("6_s0eo2")
 11:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcedi"]
-texture = ExtResource("7_xm6df")
+texture = ExtResource("7_8xeo5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -851,12 +851,34 @@ sources/0 = SubResource("TileSetAtlasSource_0jlm2")
 sources/1 = SubResource("TileSetAtlasSource_dwibj")
 sources/2 = SubResource("TileSetAtlasSource_tcedi")
 
-[node name="Level-1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0eo2"]
+size = Vector2(1283, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm6df"]
+size = Vector2(188, 182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwibj"]
+size = Vector2(192, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcedi"]
+size = Vector2(188, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgsrd"]
+size = Vector2(20, 660)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvy3t"]
+size = Vector2(1289.5, 48)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgsrd"]
+radius = 37.0
+height = 84.0
+
+[node name="Intro" type="Node2D"]
 
 [node name="Game" type="Node" parent="."]
-script = ExtResource("1_7xxsr")
+script = ExtResource("1_qgsrd")
 
-[node name="Vox" parent="." instance=ExtResource("2_hdjpo")]
+[node name="Vox" parent="." instance=ExtResource("2_hvy3t")]
 top_level = true
 
 [node name="Camera2D" type="Camera2D" parent="Vox"]
@@ -883,6 +905,7 @@ tile_map_data = PackedByteArray("AAAJAAsAAAAAAAEAAAATAAYAAAAAAAEAAAAFAAUAAAAAAAE
 tile_set = SubResource("TileSet_0jlm2")
 
 [node name="Estructura" type="TileMapLayer" parent="TileMapLayers"]
+top_level = true
 texture_filter = 1
 texture_repeat = 1
 position = Vector2(8, 64)
@@ -892,26 +915,70 @@ tile_set = SubResource("TileSet_s0eo2")
 
 [node name="Arbustos" type="Node2D" parent="."]
 
-[node name="Arbusto-1" parent="Arbustos" instance=ExtResource("5_x40xc")]
+[node name="Arbusto-1" parent="Arbustos" instance=ExtResource("8_08sp2")]
 position = Vector2(253, 258)
 
-[node name="Arbusto-2" parent="Arbustos" instance=ExtResource("5_x40xc")]
+[node name="Arbusto-2" parent="Arbustos" instance=ExtResource("8_08sp2")]
 position = Vector2(86, 358)
 
-[node name="Arbusto-3" parent="Arbustos" instance=ExtResource("5_x40xc")]
+[node name="Arbusto-3" parent="Arbustos" instance=ExtResource("8_08sp2")]
 position = Vector2(560, 61)
 
-[node name="Arbusto-4" parent="Arbustos" instance=ExtResource("5_x40xc")]
+[node name="Arbusto-4" parent="Arbustos" instance=ExtResource("8_08sp2")]
 position = Vector2(957, 203)
 
-[node name="Arbusto2-1" parent="Arbustos" instance=ExtResource("5_wgfeb")]
+[node name="Arbusto2-1" parent="Arbustos" instance=ExtResource("9_es25k")]
 position = Vector2(958, 593)
 
-[node name="Arbusto2-2" parent="Arbustos" instance=ExtResource("5_wgfeb")]
+[node name="Arbusto2-2" parent="Arbustos" instance=ExtResource("9_es25k")]
 position = Vector2(591, 565)
 
-[node name="Arbusto2-3" parent="Arbustos" instance=ExtResource("5_wgfeb")]
+[node name="Arbusto2-3" parent="Arbustos" instance=ExtResource("9_es25k")]
 position = Vector2(980, 445)
 
-[node name="Arbusto2-4" parent="Arbustos" instance=ExtResource("5_wgfeb")]
+[node name="Arbusto2-4" parent="Arbustos" instance=ExtResource("9_es25k")]
 position = Vector2(594, 290)
+
+[node name="ParedSuperior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedSuperior"]
+position = Vector2(641.5, -23.5)
+shape = SubResource("RectangleShape2D_s0eo2")
+
+[node name="ParedIzquierdaCastillo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzquierdaCastillo"]
+position = Vector2(746, 92)
+shape = SubResource("RectangleShape2D_xm6df")
+
+[node name="ParedDerechaCastillo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDerechaCastillo"]
+position = Vector2(1000, 92.5)
+shape = SubResource("RectangleShape2D_dwibj")
+
+[node name="TechoIzquierdaCastillo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TechoIzquierdaCastillo"]
+position = Vector2(1194, 252.5)
+shape = SubResource("RectangleShape2D_tcedi")
+
+[node name="ParedIzquierda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzquierda"]
+position = Vector2(-7, 322)
+shape = SubResource("RectangleShape2D_qgsrd")
+
+[node name="ParedInferior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedInferior"]
+position = Vector2(646.25, 676)
+shape = SubResource("RectangleShape2D_hvy3t")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(871, 141)
+shape = SubResource("CapsuleShape2D_qgsrd")
+
+[connection signal="body_entered" from="Area2D" to="Game" method="_on_area_2d_body_entered"]
