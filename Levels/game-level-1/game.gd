@@ -1,8 +1,5 @@
 extends Node
 
-#func _ready():
-	#await get_tree().process_frame
-	#if Global.jugador:
-		#print("Jugador encontrado:", Global.jugador.name)
-	#else:
-		#print("Jugador no encontrado aún")
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Vox"):
+		SceneSwitcher.change_scene_with_transition("res://scenes/Nivel1.tscn", "fade")
