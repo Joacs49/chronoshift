@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=4 uid="uid://dq7ntvw2u27ga"]
 
-[ext_resource type="Script" uid="uid://dh7n3doukanah" path="res://Levels/game-level-1/game.gd" id="1_qgsrd"]
+[ext_resource type="Script" uid="uid://dh7n3doukanah" path="res://Levels/intro/game.gd" id="1_qgsrd"]
 [ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="2_hvy3t"]
 [ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_rno4i"]
 [ext_resource type="Texture2D" uid="uid://5xjruir6a0ps" path="res://Tiles/decoracion/plants.png" id="4_idnwr"]
@@ -905,6 +905,7 @@ tile_map_data = PackedByteArray("AAAJAAsAAAAAAAEAAAATAAYAAAAAAAEAAAAFAAUAAAAAAAE
 tile_set = SubResource("TileSet_0jlm2")
 
 [node name="Estructura" type="TileMapLayer" parent="TileMapLayers"]
+top_level = true
 texture_filter = 1
 texture_repeat = 1
 position = Vector2(8, 64)
