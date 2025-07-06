@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bheqlryncx6l7"]
+[gd_scene load_steps=15 format=4 uid="uid://bheqlryncx6l7"]
 
 [ext_resource type="Texture2D" uid="uid://csvxaym2pikwn" path="res://Tiles/estructuras/TX Tileset Stone Ground.png" id="1_707ci"]
 [ext_resource type="Texture2D" uid="uid://b3pcj2ibesuvc" path="res://Tiles/estructuras/TX Tileset Wall.png" id="2_vqh5e"]
@@ -1276,12 +1276,6 @@ texture = ExtResource("1_707ci")
 sources/0 = SubResource("TileSetAtlasSource_vqh5e")
 sources/1 = SubResource("TileSetAtlasSource_g7ppg")
 
-[sub_resource type="Curve2D" id="Curve2D_vd8xv"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 271, 240, 0, 0, 0, 0, 686, 269, 0, 0, 0, 0, 1199, 248)
-}
-point_count = 3
-
 [node name="Nivel-1" type="Node2D"]
 
 [node name="TilesMapLayer" type="Node2D" parent="."]
@@ -1313,10 +1307,5 @@ position = Vector2(24, 715)
 [node name="Enemy" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Guard" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("5_vd8xv")]
+[node name="Guard" parent="Enemy" instance=ExtResource("5_vd8xv")]
 position = Vector2(267, 237)
-patrol_path = NodePath("../Path2D")
-move_speed = 200.0
-
-[node name="Path2D" type="Path2D" parent="Enemy"]
-curve = SubResource("Curve2D_vd8xv")
