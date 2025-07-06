@@ -1,0 +1,76 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dkqlitn2ksv0h"]
+
+[ext_resource type="Texture2D" uid="uid://dfqb3uwr765i0" path="res://Personajes/Enemigos/enemigo-1/Orc-1.png" id="1_a21wd"]
+[ext_resource type="Texture2D" uid="uid://bwp3dw1lgruie" path="res://Personajes/Enemigos/enemigo-1/Orc-2.png" id="2_23146"]
+[ext_resource type="Texture2D" uid="uid://f3joy48bbiu1" path="res://Personajes/Enemigos/enemigo-1/Orc-3.png" id="3_aeycv"]
+[ext_resource type="Texture2D" uid="uid://cnn7ysewq8oqc" path="res://Personajes/Enemigos/enemigo-1/Orc-4.png" id="4_kk5qx"]
+[ext_resource type="Texture2D" uid="uid://b3d8fyx0xh4pa" path="res://Personajes/Enemigos/enemigo-1/Orc-5.png" id="5_gr675"]
+[ext_resource type="Texture2D" uid="uid://cspxop0l24jjc" path="res://Personajes/Enemigos/enemigo-1/Orc-6.png" id="6_4i2xl"]
+[ext_resource type="Texture2D" uid="uid://dmo2cjtf1gbxt" path="res://Personajes/Enemigos/enemigo-1/Orc-7.png" id="7_8772e"]
+[ext_resource type="Texture2D" uid="uid://c82e44cn7t1b4" path="res://Personajes/Enemigos/enemigo-1/Orc-8.png" id="8_3js7k"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a21wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_23146")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aeycv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kk5qx")
+}],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a21wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_23146")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aeycv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kk5qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gr675")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4i2xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8772e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3js7k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a21wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_23146")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aeycv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kk5qx")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]

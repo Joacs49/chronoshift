@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://bheqlryncx6l7"]
+[gd_scene load_steps=16 format=4 uid="uid://bheqlryncx6l7"]
 
 [ext_resource type="Texture2D" uid="uid://csvxaym2pikwn" path="res://Tiles/estructuras/TX Tileset Stone Ground.png" id="1_707ci"]
 [ext_resource type="Texture2D" uid="uid://b3pcj2ibesuvc" path="res://Tiles/estructuras/TX Tileset Wall.png" id="2_vqh5e"]
 [ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_vqh5e"]
 [ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="4_b3h4h"]
+[ext_resource type="PackedScene" uid="uid://bivxfmgecxduu" path="res://Personajes/Enemigos/guard.tscn" id="5_vd8xv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3h4h"]
 texture = ExtResource("1_707ci")
@@ -1275,6 +1276,12 @@ texture = ExtResource("1_707ci")
 sources/0 = SubResource("TileSetAtlasSource_vqh5e")
 sources/1 = SubResource("TileSetAtlasSource_g7ppg")
 
+[sub_resource type="Curve2D" id="Curve2D_vd8xv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 302, 238, 0, 0, 0, 0, 955, 271, 0, 0, 0, 0, 1209, 249)
+}
+point_count = 3
+
 [node name="Nivel-1" type="Node2D"]
 
 [node name="TilesMapLayer" type="Node2D" parent="."]
@@ -1302,3 +1309,14 @@ position = Vector2(33, -391)
 
 [node name="Camera2D" type="Camera2D" parent="Vox"]
 position = Vector2(24, 715)
+
+[node name="Enemy" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Guard" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("5_vd8xv")]
+position = Vector2(302, 238)
+patrol_path = NodePath("../Path2D")
+move_speed = 200.0
+
+[node name="Path2D" type="Path2D" parent="Enemy"]
+curve = SubResource("Curve2D_vd8xv")
