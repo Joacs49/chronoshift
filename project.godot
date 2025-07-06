@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/Global.gd"
 SceneSwitcher="*res://scripts/SceneSwitcher.gd"
+Transition="*res://transiciones/transition.tscn"
 
 [global_group]
 
