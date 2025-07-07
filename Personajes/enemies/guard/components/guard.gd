@@ -133,8 +133,13 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 	return warnings
 
+func _on_player_detected(player: Node2D) -> void:
+	if player.has_method("respawn"):
+		player.respawn()
 
 func _ready() -> void:
+	player_detected.connect(_on_player_detected)
+
 	if Engine.is_editor_hint():
 		var selection_changed: Signal = _editor_interface().get_selection().selection_changed
 		if not selection_changed.is_connected(self.queue_redraw):

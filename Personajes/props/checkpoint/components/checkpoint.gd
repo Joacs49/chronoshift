@@ -6,5 +6,6 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
-	if body.name == "Player":
-		GameState.set_current_spawn_point(get_path_to(spawn_point))
+	print("⚠️ Body entró:", body.name, " - grupos:", body.get_groups())
+	GameState.set_current_spawn_point(get_path_to(spawn_point))
+	print("✅ Checkpoint activado:", get_path_to(spawn_point))
