@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://bheqlryncx6l7"]
+[gd_scene load_steps=15 format=4 uid="uid://bheqlryncx6l7"]
 
 [ext_resource type="Texture2D" uid="uid://csvxaym2pikwn" path="res://Tiles/estructuras/TX Tileset Stone Ground.png" id="1_707ci"]
 [ext_resource type="Texture2D" uid="uid://b3pcj2ibesuvc" path="res://Tiles/estructuras/TX Tileset Wall.png" id="2_vqh5e"]
 [ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_vqh5e"]
 [ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="4_b3h4h"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://Personajes/enemies/guard/guard.tscn" id="5_vd8xv"]
-[ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://Personajes/checkpoint/checkpoint.tscn" id="6_i8alq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3h4h"]
 texture = ExtResource("1_707ci")
@@ -1277,25 +1276,7 @@ texture = ExtResource("1_707ci")
 sources/0 = SubResource("TileSetAtlasSource_vqh5e")
 sources/1 = SubResource("TileSetAtlasSource_g7ppg")
 
-[sub_resource type="Curve2D" id="Curve2D_vd8xv"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 271, 240, 0, 0, 0, 0, 747, 228, 0, 0, 0, 0, 982, 272, 0, 0, 0, 0, 1156, 247)
-}
-point_count = 4
-
-[sub_resource type="Curve2D" id="Curve2D_i8alq"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1978, 259, 0, 0, 0, 0, 2000, 500, 0, 0, 0, 0, 1871, 563, 0, 0, 0, 0, 1738, 492, 0, 0, 0, 0, 1738, 263, 0, 0, 0, 0, 1861, 264, 0, 0, 0, 0, 1977, 261)
-}
-point_count = 7
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrwxd"]
-size = Vector2(92, 90)
-
 [node name="Nivel-1" type="Node2D"]
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.482353, 0.482353, 0.482353, 1)
 
 [node name="TilesMapLayer" type="Node2D" parent="."]
 position = Vector2(0, 62)
@@ -1318,38 +1299,13 @@ tile_map_data = PackedByteArray("AAAAAA8AAAAYAAgAAAAAABAAAAAYAAkAAAAAAAsAAAAYAAQ
 tile_set = SubResource("TileSet_b3h4h")
 
 [node name="Vox" parent="." instance=ExtResource("4_b3h4h")]
-position = Vector2(77, 234)
+position = Vector2(33, -391)
 
 [node name="Camera2D" type="Camera2D" parent="Vox"]
-position = Vector2(64, 91)
+position = Vector2(24, 715)
 
 [node name="Enemy" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Guard-walk" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("5_vd8xv")]
-position = Vector2(271, 240)
-patrol_path = NodePath("../Path-walk")
-wait_time = 0.5
-move_speed = 200.0
-
-[node name="Path-walk" type="Path2D" parent="Enemy"]
-curve = SubResource("Curve2D_vd8xv")
-
-[node name="Guard-run" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("5_vd8xv")]
-position = Vector2(1978, 259)
-patrol_path = NodePath("../Path-run")
-wait_time = 0.3
-move_speed = 300.0
-detection_area_scale = 0.1
-
-[node name="Path-run" type="Path2D" parent="Enemy"]
-curve = SubResource("Curve2D_i8alq")
-
-[node name="Checkpoints" type="Node2D" parent="."]
-
-[node name="Checkpoint" parent="Checkpoints" instance=ExtResource("6_i8alq")]
-position = Vector2(1363, 278)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint"]
-position = Vector2(-4, -9)
-shape = SubResource("RectangleShape2D_hrwxd")
+[node name="Guard" parent="Enemy" instance=ExtResource("5_vd8xv")]
+position = Vector2(267, 237)

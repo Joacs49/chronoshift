@@ -1,0 +1,85 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c4kqsgl2pcofo"]
+
+[ext_resource type="Texture2D" uid="uid://kxupxigxuhg8" path="res://Personajes/enemies/guard/components/Orc-1.png" id="1_7mxk0"]
+[ext_resource type="Texture2D" uid="uid://crdcf828n2tf" path="res://Personajes/enemies/guard/components/Orc-2.png" id="2_74dbv"]
+[ext_resource type="Texture2D" uid="uid://b8fu36nh6q7i6" path="res://Personajes/enemies/guard/components/Orc-3.png" id="3_8x6c8"]
+[ext_resource type="Texture2D" uid="uid://4xcrdrm1qfac" path="res://Personajes/enemies/guard/components/Orc-4.png" id="4_th3td"]
+[ext_resource type="Texture2D" uid="uid://3nyjjyu4ghiw" path="res://Personajes/enemies/guard/components/Orc-5.png" id="5_xyrl8"]
+[ext_resource type="Texture2D" uid="uid://dna6j1wjjfh71" path="res://Personajes/enemies/guard/components/Orc-6.png" id="6_dlibs"]
+[ext_resource type="Texture2D" uid="uid://cqvpefreyktg8" path="res://Personajes/enemies/guard/components/Orc-7.png" id="7_exsmh"]
+[ext_resource type="Texture2D" uid="uid://hcx0hst527n0" path="res://Personajes/enemies/guard/components/Orc-8.png" id="8_acs03"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mxk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74dbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8x6c8")
+}],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mxk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74dbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8x6c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_th3td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xyrl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dlibs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_exsmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_acs03")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mxk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74dbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8x6c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_th3td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xyrl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dlibs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_exsmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_acs03")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
