@@ -97,11 +97,9 @@ height = 52.0
 script = ExtResource("1_voobg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, 618.928)
 scale = Vector2(4, 3.616)
 sprite_frames = SubResource("SpriteFrames_3v7dm")
 animation = &"Vox-down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(31, 621)
 shape = SubResource("CapsuleShape2D_7fdcr")

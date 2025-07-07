@@ -216,6 +216,7 @@ unique_name_in_owner = true
 position = Vector2(0, -16)
 sprite_frames = ExtResource("5_hmc3r")
 animation = &"idle"
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nv25s")
