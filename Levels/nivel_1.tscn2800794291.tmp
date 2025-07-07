@@ -1289,8 +1289,8 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8alq"]
-size = Vector2(92, 88)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrwxd"]
+size = Vector2(92, 90)
 
 [node name="Nivel-1" type="Node2D"]
 
@@ -1348,8 +1348,8 @@ curve = SubResource("Curve2D_i8alq")
 [node name="Checkpoints" type="Node2D" parent="."]
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("6_i8alq")]
-position = Vector2(1379, 306)
+position = Vector2(1363, 278)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint"]
-position = Vector2(-18, -38)
-shape = SubResource("RectangleShape2D_i8alq")
+position = Vector2(-4, -9)
+shape = SubResource("RectangleShape2D_hrwxd")

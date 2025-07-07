@@ -8,13 +8,14 @@
 collision_layer = 0
 script = ExtResource("1_kkoqv")
 
-[node name="SpawnPoint" type="Marker2D" parent="." groups=["spawn_point"]]
-unique_name_in_owner = true
-script = ExtResource("2_s5d1s")
-
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -40)
+position = Vector2(-17, -41)
+scale = Vector2(0.510417, 0.572917)
 sprite_frames = ExtResource("4_3xcwf")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="SpawnPoint" type="Marker2D" parent="." groups=["spawn_point"]]
+unique_name_in_owner = true
+script = ExtResource("2_s5d1s")

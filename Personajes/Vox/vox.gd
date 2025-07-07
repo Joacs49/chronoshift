@@ -2,13 +2,17 @@ extends CharacterBody2D
 
 var tamano_pantalla
 @export var velocidad_jugador = 200
+var posicion_inicial: Vector2  # ← NUEVO
 
 func _ready() -> void:
 	tamano_pantalla = get_viewport_rect().size
 	show()
 	#Global.jugador = self
 	
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta):
+	if Input.is_action_just_pressed("r"):  # tecla para test
+		respawn()
+
 	var direccion = Vector2.ZERO
 
 	# Movimiento en ambas direcciones
@@ -52,3 +56,9 @@ func respawn():
 		var spawn = get_node_or_null(path)
 		if spawn:
 			global_position = spawn.global_position
+		else:
+			global_position = posicion_inicial
+	else:
+		global_position = posicion_inicial
+
+	velocity = Vector2.ZERO  # ← para evitar moverse tras reaparecer

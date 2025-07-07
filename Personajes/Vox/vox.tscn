@@ -93,7 +93,8 @@ animations = [{
 radius = 19.0
 height = 52.0
 
-[node name="Vox" type="CharacterBody2D" groups=["Vox"]]
+[node name="Vox" type="CharacterBody2D" groups=["vox"]]
+collision_mask = 19
 script = ExtResource("1_voobg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
