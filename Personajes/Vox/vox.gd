@@ -1,4 +1,3 @@
-class_name Player
 extends CharacterBody2D
 
 var tamano_pantalla
@@ -45,3 +44,11 @@ func _play_animacion(direccion: Vector2) -> void:
 		$AnimatedSprite2D.play("Vox-up")
 	elif direccion.y > 0:
 		$AnimatedSprite2D.play("Vox-down")
+
+# En el jugador
+func respawn():
+	var path = GameState.get_current_spawn_point()
+	if path != null:
+		var spawn = get_node_or_null(path)
+		if spawn:
+			global_position = spawn.global_position
