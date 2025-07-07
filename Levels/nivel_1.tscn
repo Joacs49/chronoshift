@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_vqh5e"]
 [ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="4_b3h4h"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://Personajes/enemies/guard/guard.tscn" id="5_vd8xv"]
+
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://Personajes/props/checkpoint/checkpoint.tscn" id="6_i8alq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3h4h"]
@@ -1352,4 +1353,6 @@ position = Vector2(1363, 278)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint"]
 position = Vector2(-4, -9)
+
 shape = SubResource("RectangleShape2D_hrwxd")
+
