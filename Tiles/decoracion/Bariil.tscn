@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dex2jbis8t5pq"]
+
+[ext_resource type="Texture2D" uid="uid://dk1upixss3bcu" path="res://Tiles/decoracion/barril.png" id="1_1hwmf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3gqot"]
+radius = 22.0
+height = 44.0
+
+[node name="Barril" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.25, 9.25)
+scale = Vector2(1.53226, 1.45122)
+texture = ExtResource("1_1hwmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 8)
+shape = SubResource("CapsuleShape2D_3gqot")

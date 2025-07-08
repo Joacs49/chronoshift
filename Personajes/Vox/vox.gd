@@ -35,15 +35,15 @@ func _physics_process(_delta):
 	if direccion != Vector2.ZERO:
 		_play_animacion(direccion)
 	else:
-		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play("Vox-front")
 
 	move_and_slide()
 
 func _play_animacion(direccion: Vector2) -> void:
 	if direccion.x > 0:
-		$AnimatedSprite2D.play("Vox-left")
-	elif direccion.x < 0:
 		$AnimatedSprite2D.play("Vox-right")
+	elif direccion.x < 0:
+		$AnimatedSprite2D.play("Vox-left")
 	elif direccion.y < 0:
 		$AnimatedSprite2D.play("Vox-up")
 	elif direccion.y > 0:

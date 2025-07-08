@@ -9,11 +9,12 @@ script = ExtResource("1_kkoqv")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1.00001, 0)
-scale = Vector2(0.510417, 0.572917)
+position = Vector2(5, -2)
+scale = Vector2(0.170183, 0.130371)
 sprite_frames = ExtResource("4_3xcwf")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.59721
 
 [node name="SpawnPoint" type="Marker2D" parent="." groups=["spawn_point"]]
 unique_name_in_owner = true
