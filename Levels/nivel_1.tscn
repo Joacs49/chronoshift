@@ -1985,10 +1985,7 @@ position = Vector2(-520, -23)
 scale = Vector2(1.28384, 1.01689)
 curve = SubResource("Curve2D_i8alq")
 
-[node name="Guard-final" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_68w5n")]
-position = Vector2(1920, 788)
-patrol_path = NodePath("../Path-final")
-move_speed = 300.0
+[node name="Guard-final" parent="Enemy" instance=ExtResource("6_68w5n")]
 
 [node name="Path-final" type="Path2D" parent="Enemy"]
 position = Vector2(1852, 696)
