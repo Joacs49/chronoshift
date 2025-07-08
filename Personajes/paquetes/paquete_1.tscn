@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cslrjquabyjld"]
+
+[ext_resource type="Script" uid="uid://caf57ja81u44k" path="res://Personajes/paquetes/paquete_1.gd" id="1_3cqj7"]
+[ext_resource type="Texture2D" uid="uid://bx6g2syc40u8y" path="res://Personajes/paquetes/cofre.png" id="1_r0qqo"]
+
+[node name="paquete-1" type="Area2D"]
+script = ExtResource("1_3cqj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r0qqo")

@@ -1,25 +1,55 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c4kqsgl2pcofo"]
+[gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://c4kqsgl2pcofo"]
 
-[ext_resource type="Texture2D" uid="uid://kxupxigxuhg8" path="res://Personajes/enemies/guard/components/Orc-1.png" id="1_7mxk0"]
-[ext_resource type="Texture2D" uid="uid://crdcf828n2tf" path="res://Personajes/enemies/guard/components/Orc-2.png" id="2_74dbv"]
-[ext_resource type="Texture2D" uid="uid://b8fu36nh6q7i6" path="res://Personajes/enemies/guard/components/Orc-3.png" id="3_8x6c8"]
-[ext_resource type="Texture2D" uid="uid://4xcrdrm1qfac" path="res://Personajes/enemies/guard/components/Orc-4.png" id="4_th3td"]
-[ext_resource type="Texture2D" uid="uid://3nyjjyu4ghiw" path="res://Personajes/enemies/guard/components/Orc-5.png" id="5_xyrl8"]
-[ext_resource type="Texture2D" uid="uid://dna6j1wjjfh71" path="res://Personajes/enemies/guard/components/Orc-6.png" id="6_dlibs"]
-[ext_resource type="Texture2D" uid="uid://cqvpefreyktg8" path="res://Personajes/enemies/guard/components/Orc-7.png" id="7_exsmh"]
-[ext_resource type="Texture2D" uid="uid://hcx0hst527n0" path="res://Personajes/enemies/guard/components/Orc-8.png" id="8_acs03"]
+[ext_resource type="Texture2D" uid="uid://cx84ilfsqqi4y" path="res://Personajes/enemies/guard/components/Idle/idle-1.png" id="1_uchac"]
+[ext_resource type="Texture2D" uid="uid://cs8g4mynuhkon" path="res://Personajes/enemies/guard/components/attack/Attack-1.png" id="1_vc43y"]
+[ext_resource type="Texture2D" uid="uid://diid5i6o34wns" path="res://Personajes/enemies/guard/components/Idle/idle-2.png" id="2_gam8f"]
+[ext_resource type="Texture2D" uid="uid://gg6ndamxdlp5" path="res://Personajes/enemies/guard/components/attack/Attack-2.png" id="2_o1qyg"]
+[ext_resource type="Texture2D" uid="uid://bpx737kqmmong" path="res://Personajes/enemies/guard/components/Idle/idle-3.png" id="3_a7v81"]
+[ext_resource type="Texture2D" uid="uid://cr2v7hqksd2oy" path="res://Personajes/enemies/guard/components/attack/Attack-3.png" id="3_tr503"]
+[ext_resource type="Texture2D" uid="uid://cdxd2b7e06snq" path="res://Personajes/enemies/guard/components/Idle/idle-4.png" id="4_7mxk0"]
+[ext_resource type="Texture2D" uid="uid://cecq4b381nnyb" path="res://Personajes/enemies/guard/components/attack/Attack-4.png" id="4_yhkf5"]
+[ext_resource type="Texture2D" uid="uid://ccx6ij6mnopso" path="res://Personajes/enemies/guard/components/Idle/idle-5.png" id="5_74dbv"]
+[ext_resource type="Texture2D" uid="uid://cmvuhkaq1rwdl" path="res://Personajes/enemies/guard/components/attack/Attack-5.png" id="5_juwgs"]
+[ext_resource type="Texture2D" uid="uid://drp04an1ckq1x" path="res://Personajes/enemies/guard/components/attack/Attack-6.png" id="6_6ty5w"]
+[ext_resource type="Texture2D" uid="uid://hustjxwnokto" path="res://Personajes/enemies/guard/components/attack/Attack-7.png" id="7_dwgfn"]
+[ext_resource type="Texture2D" uid="uid://ccirt5n3g4bsn" path="res://Personajes/enemies/guard/components/attack/Attack-8.png" id="8_4scrt"]
+[ext_resource type="Texture2D" uid="uid://bkqe4gmku6vj" path="res://Personajes/enemies/guard/components/walk/Walk-1.png" id="14_acb2k"]
+[ext_resource type="Texture2D" uid="uid://ecg0xvuprq0o" path="res://Personajes/enemies/guard/components/walk/Walk-2.png" id="15_n3fws"]
+[ext_resource type="Texture2D" uid="uid://c0x0d11aej1it" path="res://Personajes/enemies/guard/components/walk/Walk-3.png" id="16_q7773"]
+[ext_resource type="Texture2D" uid="uid://bv0p3skma3ya2" path="res://Personajes/enemies/guard/components/walk/Walk-4.png" id="17_kioyl"]
+[ext_resource type="Texture2D" uid="uid://dw6xuob5dppc0" path="res://Personajes/enemies/guard/components/walk/Walk-5.png" id="18_4y4x7"]
+[ext_resource type="Texture2D" uid="uid://bxd306803rlvo" path="res://Personajes/enemies/guard/components/walk/Walk-6.png" id="19_4oaak"]
+[ext_resource type="Texture2D" uid="uid://c4uygxhlf87xw" path="res://Personajes/enemies/guard/components/walk/Walk-7.png" id="20_ied0l"]
+[ext_resource type="Texture2D" uid="uid://c8eapl44gpg0s" path="res://Personajes/enemies/guard/components/walk/Walk-8.png" id="21_q0kqx"]
+[ext_resource type="Texture2D" uid="uid://dnkkeg5uruhyo" path="res://Personajes/enemies/guard/components/walk/Walk-9.png" id="22_cty3l"]
+[ext_resource type="Texture2D" uid="uid://ir5lavbyrt28" path="res://Personajes/enemies/guard/components/walk/Walk-10.png" id="23_6gv6f"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7mxk0")
+"texture": ExtResource("1_vc43y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_74dbv")
+"texture": ExtResource("2_o1qyg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_8x6c8")
+"texture": ExtResource("3_tr503")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yhkf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_juwgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6ty5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dwgfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4scrt")
 }],
 "loop": true,
 "name": &"alerted",
@@ -27,28 +57,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7mxk0")
+"texture": ExtResource("1_uchac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_74dbv")
+"texture": ExtResource("2_gam8f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_8x6c8")
+"texture": ExtResource("3_a7v81")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_th3td")
+"texture": ExtResource("4_7mxk0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_xyrl8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_dlibs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_exsmh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_acs03")
+"texture": ExtResource("5_74dbv")
 }],
 "loop": true,
 "name": &"idle",
@@ -56,28 +77,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7mxk0")
+"texture": ExtResource("14_acb2k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_74dbv")
+"texture": ExtResource("15_n3fws")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_8x6c8")
+"texture": ExtResource("16_q7773")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_th3td")
+"texture": ExtResource("17_kioyl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_xyrl8")
+"texture": ExtResource("18_4y4x7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_dlibs")
+"texture": ExtResource("19_4oaak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_exsmh")
+"texture": ExtResource("20_ied0l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_acs03")
+"texture": ExtResource("21_q0kqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cty3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6gv6f")
 }],
 "loop": true,
 "name": &"walk",

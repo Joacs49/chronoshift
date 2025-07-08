@@ -1,7 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://dmg1egdoye3ns"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://dmg1egdoye3ns"]
 
 [ext_resource type="Texture2D" uid="uid://bk4w7fw4mg131" path="res://Personajes/props/checkpoint/components/Purple/Knitwitch_Appear.png" id="1_vuwo7"]
-[ext_resource type="Texture2D" uid="uid://cowpss4rhh4lo" path="res://Personajes/props/checkpoint/components/Purple/Knitwitch_Idle.png" id="2_a12u6"]
+[ext_resource type="Texture2D" uid="uid://dbgxsj4antpra" path="res://Personajes/props/checkpoint/checkpoint.png" id="2_ixvpp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5080t"]
 atlas = ExtResource("1_vuwo7")
@@ -39,30 +39,6 @@ region = Rect2(1344, 0, 192, 192)
 atlas = ExtResource("1_vuwo7")
 region = Rect2(1536, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_twamm"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_42uj4"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bcwhm"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_umu4m"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hgd2t"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qcgdc"]
-atlas = ExtResource("2_a12u6")
-region = Rect2(960, 0, 192, 192)
-
 [resource]
 animations = [{
 "frames": [{
@@ -99,22 +75,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_twamm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_42uj4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bcwhm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_umu4m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hgd2t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qcgdc")
+"texture": ExtResource("2_ixvpp")
 }],
 "loop": true,
 "name": &"idle",
