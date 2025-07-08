@@ -1,0 +1,201 @@
+[gd_scene load_steps=24 format=3 uid="uid://dp506v6ilo57j"]
+
+[ext_resource type="Script" uid="uid://dp7mo487c0kdb" path="res://Introduccion/scripts/ui/menu/menu.gd" id="1_trpx4"]
+[ext_resource type="FontFile" uid="uid://gko7adidc5h2" path="res://Introduccion/assets/fonts/Menu/Doctor Glitch.otf" id="2_1557p"]
+[ext_resource type="Texture2D" uid="uid://cqvquh6pweo8u" path="res://Introduccion/tilemaps/button_2.png" id="3_0cswp"]
+[ext_resource type="Script" uid="uid://bxum8sc1omeqj" path="res://Introduccion/scenes/ui/menu/texture_rect.gd" id="3_2m186"]
+[ext_resource type="Texture2D" uid="uid://xwcnvw1dx6e8" path="res://Introduccion/tilemaps/button.png" id="3_yw5m1"]
+[ext_resource type="Script" uid="uid://dco1slgme54gy" path="res://Introduccion/scenes/ui/menu/texture_rect_2.gd" id="5_rlutc"]
+[ext_resource type="Script" uid="uid://cihex2r145je3" path="res://Introduccion/scenes/ui/menu/texture_rect_3.gd" id="7_sghvf"]
+[ext_resource type="Script" uid="uid://c30wop5n3rs0d" path="res://Introduccion/scenes/ui/menu/texture_rect_4.gd" id="9_h8l60"]
+[ext_resource type="Script" uid="uid://cmvkv6qy83m7u" path="res://Introduccion/scenes/ui/menu/texture_rect_5.gd" id="11_b58db"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vdfdm"]
+load_path = "res://.godot/imported/Menú.png-75f6fc509823092fb6c9132e66b2d1b6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bjgfe"]
+load_path = "res://.godot/imported/sombra-1.png-4de8b2946ec7df4c076e2e1a217616fb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pykse"]
+load_path = "res://.godot/imported/sombra-2.png-dd7abc970828b46a82a8ebaed165cee6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7knb0"]
+load_path = "res://.godot/imported/Brillos.png-53015ff009b61907230934c201528d84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cgroi"]
+load_path = "res://.godot/imported/brillo-2.png-42fbd6b6d39fe250f0a730b17c11dc2c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avtg6"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwacy"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw5m1"]
+texture = ExtResource("3_0cswp")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jimgr"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3eys"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdlg6"]
+texture = ExtResource("3_0cswp")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2m186"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6nn4d"]
+texture = ExtResource("3_yw5m1")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cw6x"]
+texture = ExtResource("3_0cswp")
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trpx4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = SubResource("CompressedTexture2D_vdfdm")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 699.0
+texture = SubResource("CompressedTexture2D_vdfdm")
+script = ExtResource("3_2m186")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 699.0
+texture = SubResource("CompressedTexture2D_bjgfe")
+script = ExtResource("5_rlutc")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 699.0
+texture = SubResource("CompressedTexture2D_pykse")
+script = ExtResource("7_sghvf")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 699.0
+texture = SubResource("CompressedTexture2D_7knb0")
+script = ExtResource("9_h8l60")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 699.0
+texture = SubResource("CompressedTexture2D_cgroi")
+script = ExtResource("11_b58db")
+metadata/_edit_use_anchors_ = true
+
+[node name="ContainerButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 220.0
+offset_top = 3.0
+offset_right = 550.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="BT_Play" type="Button" parent="ContainerButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1557p")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/hover = SubResource("StyleBoxTexture_avtg6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bwacy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yw5m1")
+text = "JUGAR"
+
+[node name="BT_Options" type="Button" parent="ContainerButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1557p")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/hover = SubResource("StyleBoxTexture_jimgr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s3eys")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sdlg6")
+text = "OPCIONES"
+
+[node name="BT_Out" type="Button" parent="ContainerButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1557p")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/hover = SubResource("StyleBoxTexture_2m186")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6nn4d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4cw6x")
+text = "SALIR"
+
+[node name="ContainerLabel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -574.0
+offset_right = 96.0
+offset_bottom = 146.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ContainerLabel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_1557p")
+theme_override_font_sizes/font_size = 91
+text = "FINDERMIND"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ContainerButtons/BT_Play" to="." method="_on_bt_play_pressed"]
+[connection signal="pressed" from="ContainerButtons/BT_Options" to="." method="_on_bt_options_pressed"]
+[connection signal="pressed" from="ContainerButtons/BT_Out" to="." method="_on_bt_out_pressed"]

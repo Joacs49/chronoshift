@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dk1upixss3bcu" path="res://Tiles/decoracion/barril.png" id="1_1hwmf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3gqot"]
-radius = 22.0
-height = 44.0
+radius = 15.0
+height = 36.0
 
 [node name="Barril" type="StaticBody2D"]
 
