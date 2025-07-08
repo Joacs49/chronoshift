@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://del1vodqvsqqp" path="res://Tiles/TX Tileset Grass.png" id="3_vqh5e"]
 [ext_resource type="PackedScene" uid="uid://bp8fdi445fr3" path="res://Personajes/Vox/vox.tscn" id="4_b3h4h"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://Personajes/enemies/guard/guard.tscn" id="5_vd8xv"]
-[ext_resource type="PackedScene" uid="uid://dogn7ib5wy5su" path="res://Personajes/enemies/guard_2.tscn" id="6_68w5n"]
+[ext_resource type="PackedScene" uid="uid://grj8ir6hmfws" path="res://Personajes/enemies/guard/guard_2.tscn" id="6_68w5n"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://Personajes/props/checkpoint/checkpoint.tscn" id="6_i8alq"]
 [ext_resource type="PackedScene" uid="uid://cslrjquabyjld" path="res://Personajes/paquetes/paquete_1.tscn" id="7_hrwxd"]
 [ext_resource type="PackedScene" uid="uid://dex2jbis8t5pq" path="res://Tiles/decoracion/Bariil.tscn" id="8_g7ppg"]
@@ -1985,7 +1985,10 @@ position = Vector2(-520, -23)
 scale = Vector2(1.28384, 1.01689)
 curve = SubResource("Curve2D_i8alq")
 
-[node name="Guard-final" parent="Enemy" instance=ExtResource("6_68w5n")]
+[node name="Guard-2" parent="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_68w5n")]
+position = Vector2(1920, 788)
+patrol_path = NodePath("../Path-final")
+move_speed = 300.0
 
 [node name="Path-final" type="Path2D" parent="Enemy"]
 position = Vector2(1852, 696)

@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b30gmpl1ay4sn"]
-
-[ext_resource type="Script" uid="uid://v83l8tkarw2g" path="res://Introduccion/scripts/audio/background/audio_controller.gd" id="1_ojnui"]
-
-[node name="AudioController" type="Node"]
-script = ExtResource("1_ojnui")
-
-[node name="bg_music" type="AudioStreamPlayer" parent="."]
-volume_db = -10.73

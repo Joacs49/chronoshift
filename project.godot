@@ -21,7 +21,6 @@ Global="*res://scripts/Global.gd"
 SceneSwitcher="*res://scripts/SceneSwitcher.gd"
 Transition="*res://transiciones/transition.tscn"
 GameState="*res://scripts/GameState.gd"
-AudioController="*res://Introduccion/scenes/audio/AudioController.tscn"
 
 [input]
 
