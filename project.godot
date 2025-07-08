@@ -22,10 +22,6 @@ SceneSwitcher="*res://scripts/SceneSwitcher.gd"
 Transition="*res://transiciones/transition.tscn"
 GameState="*res://scripts/GameState.gd"
 
-[global_group]
-
-vox=""
-
 [input]
 
 mover_derecha={

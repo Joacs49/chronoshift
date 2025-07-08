@@ -136,9 +136,15 @@ func _get_configuration_warnings() -> PackedStringArray:
 func _on_player_detected(player: Node2D) -> void:
 	if player.has_method("respawn"):
 		player.respawn()
+		GameState.notify_player_caught()
+
+func _on_player_caught():
+	_reset()  # Esto ya existe en tu código y reinicia la posición del guardia
+	_change_state(State.PATROLLING)
 
 func _ready() -> void:
 	player_detected.connect(_on_player_detected)
+	GameState.player_caught.connect(_on_player_caught)
 
 	if Engine.is_editor_hint():
 		var selection_changed: Signal = _editor_interface().get_selection().selection_changed

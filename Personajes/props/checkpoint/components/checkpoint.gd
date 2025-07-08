@@ -2,10 +2,12 @@ extends Area2D
 
 @onready var spawn_point = $SpawnPoint
 
-func _ready():
-	body_entered.connect(_on_body_entered)
+func _on_body_entered(body: Node2D) -> void:
+	print("🔍 Algo entró al checkpoint:", body.name, "| Grupos:", body.get_groups())
 
-func _on_body_entered(body):
-	print("⚠️ Body entró:", body.name, " - grupos:", body.get_groups())
-	GameState.set_current_spawn_point(get_path_to(spawn_point))
-	print("✅ Checkpoint activado:", get_path_to(spawn_point))
+	if body.name == "Vox":
+		GameState.set_current_spawn_point(spawn_point.get_path())
+		print("✅ Checkpoint activado por:", body.name)
+		print("📍 Guardado en GameState:", GameState.get_current_spawn_point())
+	else:
+		print("❌ No es el jugador. Ignorado.")

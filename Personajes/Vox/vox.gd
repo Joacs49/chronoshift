@@ -1,4 +1,3 @@
-class_name Player
 extends CharacterBody2D
 
 var tamano_pantalla
@@ -6,9 +5,9 @@ var tamano_pantalla
 var posicion_inicial: Vector2  # ← NUEVO
 
 func _ready() -> void:
+	posicion_inicial = global_position 
 	tamano_pantalla = get_viewport_rect().size
 	show()
-	#Global.jugador = self
 	
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("r"):  # tecla para test
@@ -53,6 +52,8 @@ func _play_animacion(direccion: Vector2) -> void:
 # En el jugador
 func respawn():
 	var path = GameState.get_current_spawn_point()
+
+	# Si ya hay un checkpoint activado, úsalo
 	if path != null:
 		var spawn = get_node_or_null(path)
 		if spawn:
@@ -62,4 +63,5 @@ func respawn():
 	else:
 		global_position = posicion_inicial
 
-	velocity = Vector2.ZERO  # ← para evitar moverse tras reaparecer
+	velocity = Vector2.ZERO
+# ← para evitar moverse tras reaparecer

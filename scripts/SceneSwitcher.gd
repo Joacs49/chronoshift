@@ -1,5 +1,8 @@
 extends Node
-	
+
+func _ready():
+	GameState.reset_spawn_point()
+
 func change_scene_with_transition(scene_path: String, effect: String = "fade") -> void:
 	Transition.play(effect)  # fade out
 	await Transition.animation_finished
