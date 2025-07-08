@@ -76,95 +76,9 @@ tracks/3/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_innil"]
-resource_name = "hit"
-length = 0.40001
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"alerted"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sounds/TorchHitSound:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.40001),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_8vt0k"]
-resource_name = "walk"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"walk"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sounds/FootSound:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [true, false, true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_innil"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tg57n"]
 _data = {
-&"RESET": SubResource("Animation_mswbt"),
-&"alerted": SubResource("Animation_innil"),
-&"walk": SubResource("Animation_8vt0k")
+&"RESET": SubResource("Animation_mswbt")
 }
 
 [node name="Guard-2" type="CharacterBody2D" groups=["guard_enemy"]]
@@ -262,28 +176,5 @@ label_settings = SubResource("LabelSettings_nv25s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_innil")
+&"": SubResource("AnimationLibrary_tg57n")
 }
-
-[node name="Sounds" type="Node2D" parent="."]
-
-[node name="AlertSound" type="AudioStreamPlayer" parent="Sounds"]
-unique_name_in_owner = true
-volume_db = -5.0
-
-[node name="FootSound" type="AudioStreamPlayer2D" parent="Sounds"]
-unique_name_in_owner = true
-volume_db = -2.0
-max_distance = 350.0
-
-[node name="FireSound" type="AudioStreamPlayer2D" parent="Sounds"]
-unique_name_in_owner = true
-volume_db = -2.0
-autoplay = true
-max_distance = 500.0
-attenuation = 2.0
-
-[node name="TorchHitSound" type="AudioStreamPlayer2D" parent="Sounds"]
-unique_name_in_owner = true
-volume_db = -2.0
-max_distance = 500.0

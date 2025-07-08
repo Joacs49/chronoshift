@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<<< HEAD:Introduccion/tilemaps/room1/brillo-2.png.import
+uid="uid://dl7aq2fxkl0tv"
+path="res://.godot/imported/brillo-2.png-42fbd6b6d39fe250f0a730b17c11dc2c.ctex"
+========
+uid="uid://doccm4u023rhn"
+path="res://.godot/imported/TX Shadow.png-7d7e5b1ee74cabdf76e9cf45023083eb.ctex"
+>>>>>>>> 1e9aaef9b2975644d34c563afc9f9c1f97730b44:Personajes/props/checkpoint/TX Shadow.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<<< HEAD:Introduccion/tilemaps/room1/brillo-2.png.import
+source_file="res://Introduccion/tilemaps/room1/brillo-2.png"
+dest_files=["res://.godot/imported/brillo-2.png-42fbd6b6d39fe250f0a730b17c11dc2c.ctex"]
+========
+source_file="res://Personajes/props/checkpoint/TX Shadow.png"
+dest_files=["res://.godot/imported/TX Shadow.png-7d7e5b1ee74cabdf76e9cf45023083eb.ctex"]
+>>>>>>>> 1e9aaef9b2975644d34c563afc9f9c1f97730b44:Personajes/props/checkpoint/TX Shadow.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
